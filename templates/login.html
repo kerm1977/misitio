@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+	
+	<!-- en esta siguiente área como:  block content y block title fuen como se nombró en base.html   Este es para el título dinámico -->
+	<!-- Comentario -->
+	{#<!-- en html se vería así <title>El titulo - {%block title%}{%endblock%}</title> -->#}
+{% block content%}
+
+    {% include 'include/login.html' %} 
+
+{% endblock %}

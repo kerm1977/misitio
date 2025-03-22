@@ -1,0 +1,189 @@
+from flask import Flask, render_template  #Importar Flask del módulo Flask y renderizado de plantillas
+
+
+# instancia pra representar la app con flask
+app = Flask(__name__)
+
+
+
+#*********************************************************************
+# Decorador y ruta
+#*********************************************************************
+# Pueden existir muchas rusta para una vista
+@app.route("/") #Esta ruta tiene que estar relacionada a una función	
+@app.route("/inicio") #Esta ruta tiene que estar relacionada a una función
+@app.route("/start") #Esta ruta tiene que estar relacionada a una función
+def start(): 	#Y esta representa una vista
+	return ("Hola Mundo") #que retorna un mensaje o html
+
+
+
+
+#*********************************************************************
+# Decorador y ruta
+#*********************************************************************
+@app.route("/hola") #Esta ruta tiene que estar relacionada a una función	
+def hola(): #Y esta representa una vista que se representa como una función
+	return ("Hola Mundo") #que retorna un mensaje
+
+
+
+
+#*********************************************************************
+# Tipos de datos que se le pueden pasar a una o más variables
+#*********************************************************************
+
+# string
+# int
+# float
+# path
+# uuid
+# variable a Decorador y ruta
+					# string:name
+					# int:name
+					# float:name
+					# path:name
+					# uuid:name
+@app.route("/saludo/<name>/<int:numeber>") #Esta variable name para obtener su valor en la función tiene que existir un parámetros
+def saludo(name, numeber): #y ese parámetro puede llamarse igual que la o las variables
+	return f"Hola Mundo { name} y tu edad es {numeber}" #que retorna un mensaje llamando a las variables de la vista saludo
+
+	# y en el navegador se coloca contenido de name y  numeber de la siguiente manera
+	# http://127.0.0.1:5000/saludo/kenneth/10
+
+
+
+
+#*********************************************************************
+# rutas con variables multiples 
+#*********************************************************************
+
+@app.route("/saludos") #Esta variable name para obtener su valor en la función tiene que existir un parámetros
+@app.route("/saludos/<name>") #Esta ruta obtiene un valor y se almacena como una variable dentro de la función
+@app.route("/saludos/<name>/<int:age>/<email>") #Esta ruta obtiene un valor y se almacena como una variable dentro de la función
+def saludos(name = None, age = None, email = None): #aqui se almacenan como parámetro o variable el valor None == vacio.
+
+	data = {
+		name 	: name,
+		age 	: age,
+		email 	: email
+	}
+
+	return render_template("hola.html", data=data)	
+		
+
+
+
+#*********************************************************************
+# SEGURIDAD
+#*********************************************************************
+# path escape sirven para seguridad y escapar scripts y evitar de código malicioso
+# que sean agregados malintencionadamente por la url del navegador 
+# Instalar markupsafe
+from markupsafe import escape
+# Path escape de código html
+@app.route("/loquesea/<path:code>")
+def code(code):
+	return f"{escape(code)}"	
+	# <script>alert("hola mundo")</script>
+
+
+
+
+#*********************************************************************
+# PLANTILLAS
+#*********************************************************************
+# Flask sabe automáticamente donde buscar las plantillas 
+# html y es dentro de una carpeta llamada templates
+# los html siempre se deben guardar dentro de templates
+# para eso hay que importar un módulo llamado render_template
+
+	
+
+
+
+#*********************************************************************
+# LISTAS A TRAVES DE FOR
+#*********************************************************************
+
+# Las listas pueden ser listadas en html a traves del bucle for
+# y ser llamada dentro del html por medio de las llaves {%for%} {%endfor%}
+
+@app.route("/index")
+def index():
+	variableX = "hola pepino"
+	amigos = ["ken","jen","mon","carl"] #declarar la lista en render template amigos=amigos
+	return render_template ("index.html", variableX = variableX, amigos=amigos) 
+														#-|
+														# v			
+								       #en html <p> {{variableX}} </p>
+
+								       	# llamar la lista amigos creada en esta función index
+									    # la lista en html
+										# {%for i in amigos%}
+										# <p>{{i}}</p><br>
+										# {%endfor%}	
+
+
+
+
+#*********************************************************************
+# PLANTILLA HERENCIAS
+#*********************************************************************
+
+# Por convecnión siempre utilizar base.html para nombre del archivo
+
+# El titulo puede ser incluido en bloques de contenido
+# <title>El titulo - {%block title%}{%endblock%}</title>
+
+
+
+
+
+
+#*********************************************************************
+# COMENTARIOS EN HTML DE JINJA
+#*********************************************************************
+
+# los comentarios en jinja se realizan de la siguiente manera
+		# {#COMENTARIOS#}
+		# {#<p>{{repeat("hola",3)}}</p>#}
+
+
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------
+if __name__ == "__main__":
+
+	# db.create_all()
+	# db.upgrade_all()
+	# db.drop_all()	#Solo se ejecuta para migrar nuevos campos a la db pero borra el contenido
+	app.run(debug = True, port=3000) 
+
+
+
+# Migraciones Cmder
+	# set FLASK_APP=main.py 	<--Crea un directorio de migraciones
+	# flask db init 			
+	# $ flask db stamp head
+	# $ flask db migrate
+	# $ flask db migrate -m "mensaje x"
+	# $ flask db upgrade
+
+	# ----------------------------------------------
+	# SI HAY ERRORES DE BASE DE DATOS CON alembic 
+	# ---------------------------------------------- 
+	# Can't locate revision identified by 'y la versiónxxx'
+
+	# 	1.ingresar por medio de heidisql y borrar la tabla creada alembic_version
+	# 	2.borrar la carpeta migraciones dentro del proyecto-Cmder
+	#   3.Volver a setear Flask, inicializarlo, migrarlo etc.. osea pasos de arriba
+	# 	4.Migrar <-- Agrega a la db y luego upgrade <-- guarda el cambio
+	# PYTHONANYWHERE
+	# LaTribuHiking
+	# latribu1977
+	# drop database LaTribuHiking$db
+	
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------

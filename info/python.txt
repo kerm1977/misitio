@@ -1,0 +1,1824 @@
+Python
+
+RESEÑA
+	Creador: Guido Van Rossum como alternativa de Bourne Shell en el OS Amoeba y el nombre hacer referencia al Grupo cómico Monty Python. Python sirve para crear aplicaciones de escritorio, de servidor y Web. Cuando se instala Python es necesario agregarlo al PATH. Python a comparación de otros lenguajes, utiliza identación en vez de {} llaves puntos y comas, pero cada sentencia condicional termina con dos puntos. El lenguaje fue Creado en los años  90’s 
+
+		Característica:
+		Tipado Dinámico fuerte
+		Open Source
+		Lenguaje de Alto nivel ( Asemeja más al lenguaje natural )
+		Interpretado
+		Orientado a objetos
+		Multiplataforma 
+		Multiparadigma
+
+	Extención .py pero de fondo se ejecuta .pyc que significa pycode (byte code) y cuando py está convertido a .pyc este es ejecutado por el Runtime PVM, línea a línea y declaración por declaración
+
+	Para instalar Python es necesario seleccionar agregar path para poder ejecutarlo sin problemas desde fuera de la raíz de instalación a través de la línea de comando
+
+	Normativas de Python Convenciones PEP8
+		Reglas y normas de Python. http://www.recursospython.com/pep8es.pdf
+
+PYTHON SUBLIMEREPL
+	Crear un nuevo Build System
+	New Build System
+	Crear un nuevo documento y pegar el siguiente texto......
+	{
+	"target": "run_existing_window_command",
+	"id": "repl_python_run",
+	"file": "config/Python/Main.sublime-menu"
+	}
+	Guardarlo con el nombre ** py.sublime-build.
+	Luego ir a Tools > Build System > seleccionar py y presionar, Ctrl + B Esto debería ejecutar en una nueva venta Python
+	Clave sublime text 3211
+	----- BEGIN LICENSE -----
+	Member J2TeaM
+	Single User License
+	EA7E-1011316
+	D7DA350E 1B8B0760 972F8B60 F3E64036
+	B9B4E234 F356F38F 0AD1E3B7 0E9C5FAD
+	FA0A2ABE 25F65BD8 D51458E5 3923CE80
+	87428428 79079A01 AA69F319 A1AF29A4
+	A684C2DC 0B1583D4 19CBD290 217618CD
+	5653E0A0 BACE3948 BB2EE45E 422D2C87
+	DD9AF44B 99C49590 D2DBDEE1 75860FD2
+	8C8BB2AD B2ECE5A4 EFC08AF2 25A9B864
+	------ END LICENSE ------
+
+PYTHON SUBLIMEREPL
+	Crear un nuevo Build System
+	New Build System
+	Crear un nuevo documento y pegar el siguiente texto......
+
+		{
+		"target": "run_existing_window_command",
+		"id": "repl_python_run",
+		"file": "config/Python/Main.sublime-menu"
+		}
+
+	Guardarlo con el nombre ** pepino.sublime-build.
+	Luego ir a Tools > Build System > seleccionar pepino y presionar, Ctrl + B Esto debería ejecutar en una nueva venta Python
+
+		Update
+			{
+			"update_check": false
+			}
+
+PLUGINS SUBLIMETEXT 3211 (ver 3.2.2)
+	Sidebarenhancement
+	colorhelper
+	ayu
+	seti_ui
+	sublimeREPL
+	SidebarEnhancements
+	Anaconda
+	Alignment (( para alinear CTRL + ALT + A ))
+	Colorpicker
+	GitGutter (( Este es un plugin que nos dirá qué lineas han cambiado desde la última modificación. Un indicador aparecerá al lado de los números de línea.))
+	REPL
+	FTPSync
+
+LENGUAJE Y SINTAXIS
+
+	Prompt
+		>>>
+		Desde el idle 
+		Operaciones o expresiones:
+		>>> 3+3
+		6
+		>>> 3*7
+		21
+
+	Operadores Aritméticos
+		+	suma +
+		-	resta -
+		*	multiplicación *
+		/	división / -> Con decimal
+		//	división Entera // -> Sin decimal
+		%	módulo o residuo % -> Resultado
+		**	exponencia **
+
+	Operadores de comparación
+		=
+		==	Operador igual y compara valores para comparar si son o no iguales
+		!=	Operador diferente, compara si un valor es diferente de otro 
+		< >	Compara si los valores son iguales
+		>	Mayor que
+		< 	Menor que
+		>=	Mayor o igual que
+		<=	Menor o igual que
+
+	Operadores Lógicos
+		Los operadores lógicos devuelven valores booleanos 
+			and: Tienen que cumplirse ambas operaciones.
+		
+			or:	Se puede complir una de las dos operaciones. Or es inclusivo por lo tanto si las ambas 
+		expresiones son verdaderas igual da true Alguna de las condiciones se deben cumplir
+			
+			not:	Si es falso not lo convierte en verdadero. Ejemplo not 2>1-- aunque la expresión es 
+		verdadera, not la pasa a falso
+
+			Ejemplos1:
+			>>> nota1=5  
+			>>> nota2=8
+			>>> (nota1>20)and(nota2<10) 🡪 nota1 es igual a 5 no mayor a 20
+			False
+
+			Ejemplo2:
+				>>> nota1=6
+			>>> nota2=15
+			>>> (nota1>=2)and(nota2<=20)
+			True
+
+	Operadores asignación
+		= Asignación
+		===	Igual
+		+= 	Incremento
+		-=	Decremento
+		*=	
+		/=
+		//=
+		%=
+		**=
+
+	Operadores Especiales
+		IS
+		IS NOT
+		IN
+		NOT IN
+
+	Comentarios
+		‘’’Este es un
+		 comentario múltiple
+		línea’’’
+		Precedencia
+		Las precedencias son prioridades de ejecución
+		Y se leen de izquierda a derecha.
+
+	La precedencia de operadores es el orden que se va a ejecutar una operación
+
+		Los operadores Aritméticos tiene mayor precedencia que los operadores lógicos y de comparación.
+		los operadores  de comparación  tienen mayor precedencia que los operadores lógicos
+
+			1. 	Aritméticos (mayor precedencia)
+			2. 	Comparación 
+			3. 	Lógicos
+
+		Esta es la mayor precedencia en los operadores lógicos de arriba abajo.
+
+			1.	Not (mayor precedencia y solo necesita un operando después de el)
+			2.	and (Necesita dos operadores para comparar)
+			3.	or (Necesita dos operadores para comparar)
+
+			4+6-1 🡪 Estos símbolos tienen la misma precedencia por lo que se ejecutará primero la suma y luego la resta.
+
+			En orden por precedencia de arriba para abajo con mayor prioridad: 
+			1.	()	
+			2.	**	
+			3.	+x,-x,~x
+			4.	*,/,//,%
+			5.	+,-
+
+			10*5+4**3 🡪Primero se ejecuta la exponencial luego multiplica y por último suma Pero las precedencias pueden cambiar  por medio de paréntesis. En este ejemplo ejecuta primero los paréntesis de la suma multiplica y después eleva.
+
+			(10*(5+4))**3
+			729000
+
+	Sintaxis
+		Conjunto de reglas que especifican las combinaciones de símbolos que son legales en python. Un ejemplo de una sintaxis  no válida es intentar sumar un valor contra nada  el uso ilógico de los signos de paréntesis puntuación u otro tipo de operadores:
+
+		3+  🡪 Error 
+
+	Semántica
+		Reglas que regulan el correcto uso de los valores, un ejemplo 
+		4/0 🡪 Nada se puede dividir entre cero
+
+	Tipos de datos
+		Enteros (1)
+		Strings (“Hola”)
+		Float (2.0)
+		Complejos 
+		Arrays ( Tupla=(1,2,3,4) | diccionarios={ id: valor, id:valor, id:valor  } | listas=[ x,y,z ] ) 
+		Booleanos (True, False) 
+
+	Conversión entre tipos de datos
+		La conversión entre tipos de datos es pasar de strings a integers o bis… Para ello se utilizan funciones preconstruidas Built-in: 
+
+			-int(2.0) -> Convierte números que son caracteres en entero SOLO NUMEROS. 2 numero strings  o   a enteros
+			-str(2)  -> Convierte enteros o strings o punto flotante  en strings o cadenas. "2"
+			-float(2) -> Convierte cualquier número en decimal 2.0
+
+			“3” != 3 xq uno es un entero y otro es un string:
+			>>> int("3")+3	🡪 convierte en entero un string y lo suma con  entero    
+			6	
+			>>> str(3) + "3"	🡪 Convierte de un  string y concatena con otro string
+			'33'
+ 
+
+
+	Variables
+		En Python, todas las variables son objetos. Al crear una variable se apunta a una dirección en memoria. Las variables son contenedores de tipos de datos y se conocen como una declaración de asignación estas se leen de derecha a izquierda, primero evalúa la expresión o tipo de dato y luego asigna el valor o resultado a la variable, estas funcionan dentro de un ámbito por ejemplo una función. Otro aspecto es que las variables son Case Sensitive por lo que diferencia variables llamadas igual si una tiene mayúsculas y otras minúsculas. El valor de una variable no lo determina el contenedor sino el contenido. Deben respetar la convención (PEP8 que es una forma de seguir el código para hacer el código más legible.
+
+		Formas de declarar constantes y variables
+
+			CamelCase 			= unPepino →Variables
+			snakeCase 			= un_pepino → Bases de datos
+			SCREAMING SNAKE CASE	= ESTO_ES_UN_PEPINO → Constantes
+			kebab-Case			= esto-es-un-pepino →URLS
+
+		La sintaxis correcta de las variables. Estas deben:
+			-Las variables contienen un valor por lo que se les asigna con el símbolo igual =
+			-Las variables pueden almacenar valores lógicos (True o False)
+			-Contener palabras divididas con _ Ejemplo: variable_Correcta = True (Esa división empezando la segunda palabra en mayúscula se conoce como CAMEL CASE)
+			-Son case Sensitive (No es lo mismo hola que Hola)
+			-Cuando una variable está compuesta por más de una palabra debe iniciar en minúscula dividida por un subraya seguido por la segunda palabra en mayuscula. 
+			-NO tienen que empezar en mayúscula (Aunque la variable sería reconocida, por convención no debe empezar con mayúsculas)
+			-NO se pueden usar palabras reservadas por el mismo python
+			-NO pueden empezar por número
+			-NO iniciar con números pero sí contener
+			-NO usar tildes ni ñ ¢  $  - @ % u otros signos de puntuación (únicamente _ )	
+
+EJERCICIOS
+	Alternando valor de las variables
+	
+		juan, maria=200,15 
+		juan, maria=maria,juan
+
+	Ejercicio de variables anidadas
+		Este ejercicio necesita saber cuantos minutos y segundos hay en 3 días
+
+			dias, hora, minuto = 3, 24, 60
+			print(f"En {dias} días, hay {dias*hora} horas y  {minuto*hora*3}
+
+
+	Funciones Pre construidas (Builtins)
+		Las funciones pre construidas son funciones que pueden ser previamente llamadas  un ejemplo es MAX:
+
+	Esta función permite conocer cual número entre los paréntesis es mayor 
+		>>> max(10,2)
+		10
+
+	Para conocer las funciones pre construidas 
+		El siguiente comando permite conocer las funciones pre construidas disponibles predeterminadamente
+		>>> dir(__builtins__)
+
+		>>> help(max)
+			Help on built-in function max in module builtins:
+
+			max(...)
+		    max(iterable, *[, default=obj, key=func]) -> value
+		    max(arg1, arg2, *args, *[, key=func]) -> value
+		    
+		    With a single iterable argument, return its biggest item. The
+		    default keyword-only argument specifies an object to return if
+		    the provided iterable is empty.
+		    With two or more arguments, return the largest argument.
+
+FUNCIONES
+	#Definir Funciones
+		Para construir una función se usa la palabra reservada def seguido del nombre y cierra con paréntesis y dos puntos. Como las funciones son bloques de código se debe identar para que funcione debido que Python omite símbolos de puntuación. Pueden devolver valores o  tener parámetros conocidos como argumentos. y cuando se encuentran dentro de una clase seles conoce como métodos 
+
+	#Diseño estándar de una Función
+		Las funciones en python cuentan con 5 partes fundamentales.
+		Cabecera que incluye el nombre y los parámetros
+		Type Contract ‘’’(num, num)🡪 num’’’
+		Docstring que indica tipos de datos parámetros Descripción ejemplos
+		Ejemplos de uso 
+		Cuerpo
+
+	#Sintaxis
+		>>> def suma (x):   🡪 Nombra la función con un parámetro X dentro de la zona de parámetros
+			return x+2 🡪 almacena la expresión donde x es el valor a asignar y le suma 2
+			
+		>>> suma(2) 🡪llama la función con el parámetro numérico que es el valor que remplaza a X
+
+	#Un ejercicio de Función
+		Desde un módulo digitar la función un ejemplo
+		Parametros
+
+			def area_triangulo (base, altura):
+			    area= base * altura/2
+			    return área
+		
+					Guardarla y Llamarla desde el Shell
+								Argumentos
+				>>> area_triangulo(8,8)
+					64
+	#Docstring
+		Permite documentar las propias funciones. Se llama por medio de help seguido del nombre de la función creada. Es una forma de documentar cada función creada. Se importa ya que no es una función propia de python y con help se conoce la documentación creada
+
+	#Funciones o Métodos
+		Conjunto de líneas  de código agrupadas que funcionan como una unidad realizando una tarea específica, a esto se le conoce como reutilización. Pueden devolver valores por medio del return o no, pueden o no contener parámetros conocidos como argumentos que van dentro de los paréntesis. A las funciones se les conoce como métodos cuando se encuentran dentro de una clase.  Las funciones debe ser llamadas para que funcionen.
+
+		def nombre_funcion():	Sin parámetros
+
+		def nombre_funcion(argumentos):  Con parámetros
+
+	#Imprime en pantalla argumentos 
+		Las dos funciones devolverán el cuadrado de un número
+		la Primer Función usará return para devolver un resultado
+		la segunda función usará print para imprimir el resultado
+
+		>>>def cuadrado (x):
+		    cuadro = (x**2)
+		    return ("El resultado de es: "), cuadro
+
+STRINGS
+	Uso de Strings
+		Los strings son cadenas de caracteres  son inmutables que componen un texto y es un tipo de datos encerrado entre comillas.  Estas cadenas pueden ser indexadas  Los comentarios en python:
+		Comillas simples
+		Comillas dobles    
+		Comillas triples para formatear los renglones
+		Ejemplo de una cadena de texto y el uso de las comillas: 
+		cervantes='Escritor español que escribió "Don Quijote", libro muy conocido'
+		Para utilizar comillas dobles dentro de comillas dobles del una cadena de texto sin error:
+			
+			‘ texto ”comillasdobles” texto ’ 🡪 Abriendo con comillas simples
+			“texto \”comillasdobles\” texto” 🡪usando previamente a las comillas dobles alt92=\
+			
+			\ es un carácter de escape
+
+			Concatenar o unir
+			texto= "verano " + "caluroso"
+			texto ="verano " + 5 → Error
+			texto ="verano " * 5 → verano verano verano verano verano
+			
+			Sumar un texto x 5
+			texto1= "pepino " * 5
+			
+			>>> ("verano " + "caluroso ") * 5 
+			'verano caluroso verano caluroso verano caluroso verano caluroso verano caluroso '
+			‘’’Se pueden escribir strings con triple comilla para hacerlas multilínea’’’
+
+			>>> "a" > "b" = True →  a es menor que b y b menor q c por estár antes
+			>>> "ab" < "ac" = True → ab son menores en orden al abecedario  que ac
+
+	CARACTERES O SECUENCIA DE ESCAPE
+	
+		#Cuando uso %r ninguna secuencia de escape funciona.
+			\n  🡪 salto de línea
+			\t 🡪 Tabulación
+			“\”texto\” “🡪 Poner comillas dobles dentro de comillas dobles
+			\\ 🡪 Una barra invertida	
+			\’ comilla simple dentro de comillas simples
+			\N{name}  🡪 Carácter name en la base de datos Unicode
+			\r 🡪 Retroceso
+			\v 🡪 Tabulación Vertical
+			\xhh 🡪 Carácter con valor Hexadecimal
+
+		#Formatear con colones y dolares
+			precio = input("Digite un monto: ")
+			print("El precio de esta carajada es ¢%.2f " % float(precio))
+			print("El precio de esta carajada es $%.0f " % float(precio))
+
+		#Concatenar
+			Es la unión de dos caracteres o cadena de caracteres entre si o bien cadena de caracteres con variables. El detalle de concatenar se encuentra que en muchas ocaciones se utiliza el más para ello y si se concatena un string con un número es como intentar sumar letras con números dando un error de semantica. Se puede concatenar con coma pero esta deja un espacio. por lo que no hay que separar el texto de las comillas como en el tercer ejemplo siguiente:
+
+				"cadena " + 6 → Error 
+				print ("hola " + "mundo") → Correcto
+				print ("hola" , "mundo") → Correcto
+
+		#Ejemplos de concatenación 
+			nombre , apellido , edad = "Kenneth" , "Ruiz" , 43	→ Variable
+			print("hola, me llamo", nombre,apellido, "y tengo", edad, "años")	→ con coma
+			print("hola, me llamo " + nombre,apellido + " y tengo " + str(edad) + " años") → Con + 
+
+		#METODOS upper, lower, title
+			.upper() # Todo en mayuscula
+			.lower() # Todo en minuscula
+			.title() # La primera letra de cada palabra en Mayuscula
+			.capitalize() #La primera letra de la primer palabra en mayuscula
+			.strip() # Elimina los espacios de ambos lados
+			.split() # Crea una lista y coloca cada palabra en un indice diferente
+			   	  # pero split soporta argumentos. Esto es que si ponemos split(".")
+			   	  # este separá en un indice de la lista cada frase hasta que encuentre
+			   	  # un punto. ("hola. mundo") => ["hola", "mundo"]
+		   	     					         	     0   	1
+
+FORMATEAR CON VARIABLES
+
+	edad = input("Digite su edad: ")
+	   	# %s = string va a almacenar el valor de type(edad)
+	   	# %i = integer	%f = float
+		print("Su edad es %s" % type(edad))
+		print("Su edad es %s" % edad)
+
+	import math
+		pi = math.pi
+
+		#%f es para formatear una variable float y %.2f es decirle que el float tenga solo 2 decimales
+		print("El valor de pi es %.2f" % pi)
+
+		nomb, ape, edad = "Kenneth", "Ruiz", 45
+		print("Hola mi nombre es %s %s y mi edad es %d" %(nomb,ape,edad))
+
+	Formatear con simbolos de dinero
+		precio = input("Digite un monto: ")
+							Con 2 decimales y simbolo de colones
+		print("El precio de esta carajada es ¢%.2f" % float(precio))
+							Sin decimales y simbolo de dolar
+		print("El precio de esta carajada es $%.0f" % float(precio))
+
+	End evita el salto de linea
+		print("Hola mundo", end=" ")
+
+	#INDICES
+		nombre = "python" #Crea una cadena
+		print(nombre) #Imprime la cadena
+		n1 = list(nombre) #crea una lista con la cadena
+		print(n1) # Imprime la variable que contiene la lista creada
+		n2 = tuple(nombre) # Crea una tupla con la variable n2 y la cadena
+		print(n2) #Imprime la variable n2 como tupla
+		print(n2.index("p")) #Imprime el índice donde se encuentra la letra indicada
+
+		DEL - IN
+		# del Borra los elementos dentro de una lista
+
+		# in Muestra si un elemento está dentro de lista, tuplas, diccionarios, o elemto y por lo general se utiliza dentro de un if xxx in xxxx:  ...
+
+		nombre = "kenneth" #Declara una variable
+		n = list(nombre) # Declara una variable y la convierte en lista con los caracteres de nombre
+		print(n) #Imprime n
+
+		l = "k" in n #Declara una variable y busca in(en) la variable n el elemento "k"
+		print(l) # Imprime l y el resultado es True xq k si está dentro de esta variable
+
+
+
+		# mostrar en pantalla la version actual de python instalada en el sistema
+		import sys
+		# Ver la versión
+		print(f"La versión de python instalada en este equipo es: {sys.version}")
+		# Mas detalles de la versión
+
+		print(f"La Información de versión de python es: {sys.version_info}")
+		'''
+		SYS.VERSION INFO. MUESTRA UNA NOMENCLATURA PARA VERSIONAMIENTO SEMÁNTICO ------------------------
+		Problemas, incluciones de nuevos esquemas, remueve funcionalidades en el lenguaje se modifica
+		    major: x
+
+		Incluciones de funcionalidades, y cambios menores
+		    minor: x,
+
+		Mejoras, ajustes, resoluciones de problemas  
+		    micro: x
+
+
+		#FORMATEAR CON VARIABLES MÁS OPCIONES
+			edad = input("Digite su edad: ")
+			   			 # %s = string va a almacenar el valor de type(edad)
+			   			 # %i = integer	%f = float
+			print("Su edad es %s" % type(edad))
+			print("Su edad es %s" % edad)
+
+			import math
+
+			pi = math.pi
+			#%f es para formatear una variable float y %.2f es decirle que el float tenga solo 2 decimales
+			print("El valor de pi es %.2f" % pi)
+
+			f = 300
+			   		 # %a va almacenar el valor de f
+			print("El valor de f es %a" % f)
+
+HORA Y AÑO
+	
+	# Mostrar en pantalla la fecha y hora del sistema
+		Importar la función datetime
+		import datetime
+
+		>>>tiempo = datetime.datetime.now()
+		>>>print(tiempo)
+
+		Horas Minutos Segundos | Año mes dia
+		formato = tiempo.strftime("%H:%M:%S %Y-%m-%d")
+		print(formato)
+					Horas Minutos Segundos | dia mes año
+		formato = tiempo.strftime("%H:%M:%S %d-%m-%Y")
+		print(formato)
+					Horas Minutos Segundos 
+		formato = tiempo.strftime("%H:%M:%S")
+		print(formato)
+					Dia mes año
+		formato = tiempo.strftime("%d-%m-%Y")
+		print(formato)
+
+	# Mostrar en pantalla la fecha y hora del sistema
+		import datetime
+
+		tiempo = datetime.datetime.now()
+		print(tiempo)
+
+		formato = tiempo.strftime("%H:%M:%S %Y-%m-%d")
+		print(formato)
+		formato = tiempo.strftime("%H:%M:%S %d-%m-%Y")
+		print(formato)
+		formato = tiempo.strftime("%H:%M:%S")
+		print(formato)
+		formato = tiempo.strftime("%d-%m-%Y")
+		print(formato)
+
+PRINT
+	print("hola mundo"[0]) → indexa un elemento en un string
+	print("hola mundo"[0]) # Entra directamente al indice
+	saludo = "Holas Pepinos" # Entra utilizando una variable
+	print(saludo[6])
+	print(len(saludo)) # Muestra el largo de un valor, variable, arreglo.. etc.
+	print(saludo[0]) # Muestra desde indice cero (H)
+	print(saludo[-1]) # Muestra el último indice pero es necesario saber cuantos elementos tiene el arreglo para usar indices negativos
+	print(saludo[0:6]) # Muestra desde el indice 0 hasta el 6
+	print(saludo[7:]) # Muestra desde el indice 7 hasta el final
+
+	Los índices se muestran de la siguiente manera. El nombre de la variable y cada letra tiene  su propio índice. Ejemplo:
+
+	#Ejercicios de concatenación y e indexación
+		'''Crear una variable d a partir de las variables  a b c que contenga la palabra partitura'''
+
+		a= "altura"
+		b= "parte"
+		c= "cristal"
+
+		print(b[:4] + c[2] + a[-4:]) #partitura
+
+
+		La función predefinida >> print, nunca se puede utilizar como nombre de variable y es usada para mostrar resultados en pantalla o imprimir resultado en pantalla. Esta imprime variables, funciones, operaciones y cualquier tipo de dato de python mientras se encuentre dentro de las sintaxis y semánticas correctas. Dentro de ella se puede concatenar cadenas de texto y realizar operaciones.
+
+	#El concatenar con python es con (+) y (.)
+		Formas de imprimir y formatear en python
+		print( f "Hola me llamo {nombre} {apellido} y tengo {43} años") 
+		print("Hola me llamo { } { } y tengo { } años" . format(nombre, apellido, edad))
+		print("Hola me llamo " + nombre + " " + apellido + " y tengo " + str(edad) + " años")
+		print("Hola me llamo" , nombre , apellido , "y tengo" , str(edad) , "años")
+		Input
+		
+	#Es otra función que almacena el contenido ingresada por teclado. La función input siempre devuelve un string un ejemplo es: 
+
+		nombre= input("Como te llamas?")
+		edad = int(input("Cuantos años tienes"))  → Convertir en entero anidando una función 
+		print ("Hola " + nombre)
+
+	#Es necesario convertir un número a entero cuando es ingresado por input. Esto utilizando la función int(input( )). Si este proceso no se realiza todo número dentro de un input será string y este devolverá un error al concatenar números con strings
+
+Built-In METODOS
+	Herramientas:
+	https://www.metric-conversions.org/es/longitud/kilometros-a-millas.htm
+
+	int(numero)	Convierte un caracter numérico “5” a entero 5
+	
+	str(numero)	Convierte un valor numérico en string
+	
+	type(variable)	Indica que tipo de dato contiene esa variable. Devuelve class ‘str int o bol’
+	
+	print(contenido)	Devuelve el contenido que se encuentre dentro
+	
+	input(contenido)	Ingresa texto a través de esta función
+	
+	variable.lower()		Convierte a minúscula
+	
+	variable.upper()		Convierte a Mayúscula
+	
+	variable.capitalize()	Convierte la primer letra en mayúscula
+	
+	variable.swapcase()  	Convierte lo que está en mayúscula a minúscula y Bis
+
+	variable.count()		list.count(value)  Muestra la cantidad de veces hay  un elemento.
+							Este ejemplo solicita un texto y devuelve cuantas veces se encuentra la palabra dentro de lo digitado.
+	
+			nombre=input("Digite su nombre completo: ")
+			x= nombre.count("e")
+			print(x)
+
+			variable.endswith()	Devuelve True o False si termina con un caracter específico. 
+			Este ejemplo solicita un introducir un texto y si termina con h devueve True.
+						edad=input("Digite su edad: ")
+
+			x= edad.endswith("h")
+			print(x)
+
+		variable.isdigit()		Devuelve True o False si la variable es texto o no. → print(nombre.isdigit())
+		
+		isdigit() Evalúa si hay caracteres y no números. Además se pueden compara si son número o decimales o números dentro de un string o tiene  espacios en blanco:
+
+		variable.isalpha()	#Evalua si son caracteres, letras 
+		
+		variable.isdecimal()	#Evalua si son caracteres numericos con decinal
+		
+		variable.isnumeric()	#Evalua si son numeros
+		
+		variable.islower()	#Evalua si el texto es minuscula
+		
+		variable.isupper()	#Evalua si el texto es mayuscula
+		
+		variable.isspace()	#Evalua si el texto tiene espacios
+		
+		variable.startswitch(“x”)#Evalua si un texto empieza con una letra o palabra x
+
+	#La sintaxis de todas las anteriores en el mismo ejemplo
+		edad=input("Digite su edad: ")
+		if edad.isdigit():    # isalpha, isdecimal, isnumeric...etc
+		    print("Correcto")
+
+		len(variable)		Cuenta cuántos caracteres tiene variable
+		cadena.find("palabra")	Busca una palabra dentro de una cadena de texto
+
+		cadena.replace("palabra", "pepino" ) Reemplaza la primer palabra por la segunda
+		nombre = "Kenneth Ruiz Matamoros Rocos Ramirez"
+		print(nombre.replace("a", "i")) #Kenneth Ruiz Mitimoros
+
+		cadena.find("R") Muestra el indice de la primer letra que encuentre de las solicitadas aunque la cadena tenga más de una R o letra solicitada, solo indica el indice de la primera R por ejemplo: 
+		nombre= "kenneth Ruiz Matamoros"
+		print(nombre.find("R")) # Indice 8
+
+LAMBDA
+	Funcionan solo para expresiones pequeñas
+		# Sumar
+			sumar = lambda a,b:a+b
+			print(sumar(5,5))
+
+		#Multiplicar un número
+			duplicar = lambda n: n*2
+			print(duplicar(20))
+
+		# Buscar su es par o no [Retorna un booleano]
+			pares = lambda p: x%2==0
+			x=int(input("Digitar un número: "))
+			print(pares(x))
+
+		#Revertir una cadena
+			revertir= lambda cadena: cadena[::-1]
+			cadena = input("Digite un nombre: ")
+			print(revertir(cadena))
+
+LISTAS
+	#Las listas son estructuras de datos  que nos permiten almacenar y guardar cantidad de valores.
+	Son equivalentes a arrays en otros lenguajes de programación. Se pueden expandir dinámicamente
+	añadiendo nuevos elementos.
+
+	#Las listas reservan varios espacios, en la memoria del ordenador par almacenar valores
+	pero que funcionan como una unidad. Una lista es comparable con una estantería. Cuentan
+	con un índice que inicia en 0 que es la posición dentro de la lista. NO es lo mismo la cantidad
+	de elementos que la posición de un elemento.
+
+	#La sintaxis de un array es de la siguiente forma.
+
+	        nombre_Lista = ["string, enteros, booleanos(True / False)"]
+
+	#Las listas tienen un indice que inicias desde cero y pueden ser contadas en adelante iniciando desde 0, Pero también se pueden contar en negativo, o sea de derecha a izquierda pero esta vez iniciando desde -1. Un ejemplo es:
+
+	   							(  -4   	 -3   	-2         -1  )
+
+	    almacena_Nombre	    =	[ "kenth", "jen", "Tony", "Majo" ]
+
+	   				 			(    0    	  1    	 2     	3     )
+
+	#Un ejemplo práctico para mostrar elementos de una lista es invocandola primero y entre [ ] llamar los indices a mostrar: 
+
+		almacena_Nombre=["kenth", "jen", "Tony", "Majo", "JC"]   	 
+		    
+		print(almacena_Nombre[:])     #imprimet toda la lista
+		print(almacena_Nombre[:4])    #imprime desde 0 hasta el indice 4
+		print(almacena_Nombre[0:3])    #imprime desde 0 hasta el indice 3
+		print(almacena_Nombre[2:])    #imprime a partir del indice 2
+		print(almacena_Nombre[-3:-1]) #OJO en este ejemplo imprime desde "majo hasta tony"
+		print(almacena_Nombre[-4:])    #imprime desde "JC" hasta "jen"
+		print(almacena_Nombre.index("jen")) #Muestra el indice del elemento indicado.
+		print("jen" in almacena_Nombre) #Si el elemento está devuelve True o False si no
+		print(len( nueva_Tupla))  #Consulta cuantas elementos tiene la lista
+
+		almacena_Nombre.append("Naelia")  →  Inserta un valor al final de la lista
+		almacena_Nombre.insert(2,"Naelia")  →  Inserta un valor intermedio. Primero el indice y luego el valor
+		almacena_Nombre.extend(["Yuli", "Vane" , "Nina"]) →  Extiende los elementos de otra lista
+		almacena_Nombre.remove("Yuli") → Elimina el primer elemento con ese nombre
+		almacena_Nombre.pop() #Elimina el último elemento de la lista. No es necesario indicar cual
+
+		lista3 = lista1 + lista2 # Suma una lista con otra
+		n=[5,0,9,3,7,6,4,5,2,1,8]
+		n.sort()
+		print(n)
+
+	# OTRAS FUNCIONES DE LAS LISTAS
+
+		lista = [1,8,9,28,35,98,72,2]
+
+		#Suma el valor numerico de las listas. NO suma strings
+		print(sum(lista))
+		print(lista.index(8)) =Indice #1
+
+		#Cuenta los elementos de una lista por cantidad no por indice
+		print("Largo de la lista es: ",len(lista))
+
+		#Busca el menor valor de una lista
+		print(min(lista))
+
+		#Busca el mayor valor de una lista
+		print(max(lista))
+
+		nombre = "Kenneth Ruiz Matamoros Rocos Ramirez
+		print(nombre.count("R"))  # 3 veces la R
+
+		numeros = [5,100,26,80,10,93,41,62]
+		numeros.sort() # NOOO sirve dentro de un print()
+		print(numeros) # Acomodaen orden los números o alfabéticamente una lista
+
+		#Invierte el orden de una lista
+
+
+
+	# LISTA DE LISTAS FILAS Y COLUMNAS
+
+		#col 0,  1, 2,  3, 4,
+		a = [1,  2, 3,  4, 5] #fila 0
+		b = [68,96,54,100,70] #fila 1
+		c = [10,20,30, 40,60] #fila 2
+
+		l = [a,b,c] #Crea una lista de listas
+		 
+		print( l )
+		Cola en python.
+
+		from collections import deque
+
+		cola = deque(["Kenneth","Ruiz","Matamoros","46"])
+		print(cola)
+
+		# Agregar elemento a la cola
+		cola.append("Carlos") #Agrega carlos a la cola
+		print(cola)
+
+		# Eliminar elemento de la izquierda a la cola
+		cola.popleft() #Elimina kenneth de la cola
+		print(cola)
+
+		print( l [1][4] )
+
+TUPLAS
+	La tuplas son listas inmutables que no pueden se modificadas después de su creación
+	en ella no funcionan  append, extend, remove.
+	
+	Si permite extraer elementos pero el resultado es una tupla nueva y permite comprobar  si un elemento se encuentra en una tupla y buscar dentro de ellas.
+	
+	Cuenta con un ventaja ante las listas y es que son más rápidas, ocupan menos espacio, permite formatear strings y puede convertirse como clave en un diccionario, las listas pero al igual que las listas tiene un indice que inicia desde cero. 
+
+	#La Sintaxis:
+
+
+		lista=["kenth", "jen", "Tony", "Majo", "JC"] 
+		tupla=("kenth", "jen", "Tony", "Majo", "JC") 	 
+
+	#Convertir una  Tupla en una lista o tupla en lista:
+
+		nueva_lista = list(tupla)
+		nueva_Tupla = Tuple(lista)
+
+		print("kenth" in nueva_Tupla) #Consulta si kenth está en la tupla
+		print( nueva_Tupla.count("jen")) #Consulta cuantas veces esta Jen en la tupla
+		print(len( nueva_Tupla))  #Consulta cuantas elementos tiene la  tupla
+
+	#Desempaquetado de tupla
+		El desempaquetado de una tupla es la forma de asignar el contenido de la misma a elementos. por ejemplo en la siguiente tupla, hay 4 elementos dentro de la tupla y estos  se asignan en el mismo orden a los valores debajo de ella asi que kenth queda asignada a nombre, día a 12,  mes a 11 y anio a 1977. 
+
+	#La Sintaxis:
+		tupla=("kenth", "16", "11", "1977") 	
+		nombre, dia, mes, anio = tupla 
+
+			Otro ejemplo del Desempaquetado de tuplas
+			# Desempaquetado de tuplas
+			# Por lo general se debe asignar la misca
+			# cantidad de valores a la misma cantidad
+			# de variables. Pero anteceder un asterisco
+			# al último valor permite convertir en una
+			# y asignar a una lista los valores restantes
+
+			a,b,*c= 1,2,3,4,5,6,7,8
+			print(a)
+			print(b)
+			print(c)
+
+
+
+	#Permite el intercambio de valores
+		tup1 = ("Mundo", "Hola")
+		tup2 = ("Hola", "Mundo")
+		print(tup1, tup2)
+
+		tup1, tup2 = tup2, tup1 # aquí es donde se invierten los valores
+		print(tup1,tup2)
+		# Las tuplas son listas inmutables no se pueden modificar luego de su creación.
+		# No permite añadir, eliminar, mover elementos. No funciona
+		# append, extend, remove.
+		# Si permite extraer porciones pero el resultado es una tupla nueva
+		# si permite comprobar si un elemento se encuentra
+		# si permite indexar
+		# Utilidad:
+		# Más rápidas que las listas
+		# Menos espacio
+		# formatean strings
+		# puede utilizarse como clave en un diccionario
+
+	# Sintaxis:
+		nombre_Tupla = (elemento, elemento, elemento)
+		mitupla = ("Juan",1, True, 1977,1,18,"mañana", "AZUL", False, 1)
+		print(mitupla[3])
+
+	# Verifica cuantas veces se encuentra un elemento dentro de una tupla
+		print("COUNT = ", mitupla.count(1977))
+
+	#Verificar la longitud de una tupla
+		print("Largo de la tupla:  ", len(mitupla), " Elementos")
+
+	# in Revisa si un elemento está dentro de una tupla
+		print("Juan" in mitupla)
+
+	#Las tuplas unitarias o sea de un solo elemento deben ir acompañados de una coma al finaL entre parentesis
+		mi_Tupla_Unitaria = ("banano",)
+		print(len(mi_Tupla_Unitaria))
+
+	# Una forma de guardar un elemento o varios elementos de una tupla en variables es:
+		nombre = ("Kenneth", "Eduardo", "Ruiz", "Matamoros", 43)
+		nombre1, nombre_2, apellido1, apellido2, edad = nombre #nombre es tupla
+		print(nombre_2) #Eduardo
+
+	# Convertir tuplas en una lista
+		miLista = list(mitupla)
+		print(miLista)
+
+DICCIONARIOS
+	Al igual que las tuplas y las listas estas permiten guardar todo tipo de dato e incluso otras listas y otros diccionarios. Son asociativos o sea clave:valor para cada elemento almacenado. Los elementos guardados no están ordenados y es indiferente  a la hora de almacenar información. No pueden existir dos claves iguales.
+
+	#La Sintaxis:
+
+		diccionario={
+		" San José":"Costa Rica ",
+		"París ":"Francia ",
+		"Madrid":"España ",
+		"Lima":"Perú ",
+		"Quito":"Ecuador",
+		"Roma":"Italia "
+		}
+
+	"Los diccionarios se invocan por clave para mostrar el valor Un ejemplo de ello es el siguiente
+
+		print(diccionario) #Muestra todos los valores del diccionario
+		print(diccionario[" San José"]) #Muestra su valor que es Costa Rica
+		print(diccionario.keys()) #Imprime las claves de un diccionario
+		print(diccionario.values()) #Imprime los valores de un diccionario
+		print(len(diccionario)) #Imprime la longitud del diccionario
+
+		diccionario["Londres"]="Caracas" #Agrega otro elemento al diccionario 
+		diccionario["Londres"]="Reino Unido" #Corrige el error con la clave
+		del diccionario["Londres"] #Elimina la clave y valor de el diccionario
+
+
+	#Se puede asignar los valores de una tupla y desempaquetar los elementos dentro de un diccionario. Esto se realiza a través de los indices de la tupla seguido del valor que se le asignará a esa tupla. 
+
+	#miTupla=(" San José","Managua","Ciudad Panamá"," San Salvador")
+	diccionario={miTupla[0]:"Costa Rica" ,  miTupla[1]:"Nicaragua" ...etc}
+
+
+	#capitales = {"Alemania":"Berlin", "Francia":"Paris", "Reino Unido":"Londres", "España":"Madrid"}
+	
+	for i in capitales:
+	    print(i)  #Imprime las claves
+	    print(i,capitales[i]) #Imprime clave y valorcapitales = {"Alemania":"Berlin", "Francia":"Paris", "Reino Unido":"Londres", "España":"Madrid"}
+	print(capitales)
+
+	# Imprime el valor de una clave por ejemplo "Alemania" imprime "Berlin"
+	print(capitales.get("Alemania"), “No está” )
+
+	#Devuelve las claves de un diccionario
+	a = capitales.keys()
+	print(a) # dict_keys(['Alemania', 'Francia', 'Reino Unido', 'España'])
+
+
+	#Separa como listas los elementos de un diccionario
+	x = capitales.items()
+	# dict_items([('Alemania', 'Berlin'), ('Francia', 'Paris'), ('Reino Unido', 'Londres'), ('España', 'Madrid')])
+	print(x)
+
+
+	cap = capitales.copy() # Copia un diccionario dentro de una variable
+	print(cap)
+
+	capitales.clear() # Remueve todos los elementos de un diccionario
+	print(capitales) # Devuelve {} o None
+
+
+	# Se usa cuando se necesita proporcionar el mismo valor a diferentes claves
+	otro_diccionario = dict.fromkeys(["vale","kenth","jen","mini","tony"],10)
+	print(otro_diccionario) # {'vale': 10, 'kenth': 10, 'jen': 10, 'mini': 10, 'tony': 10}
+
+
+	# Actualiza y combina 2 listas en una sola. No respeta el orden.
+	# En caso de que haya un mismo valor en ambas listas, las une
+	dict1 = {1:"a", 2:"b", 3:"c", 4:"d"}
+	dict2 = {5:"e", 6:"f", 7:"g", 5:"h"}
+
+	dict1.update(dict2)
+	print(dict1)
+
+
+	#Trae todos los valores de un diccionario
+	d = dict2.values()
+	print (d)
+
+
+	# Borra la clave indicada
+	borra=dict1.pop(1)
+	print(borra)
+	print(dict1)# Conjuntos son similares a los diccionarios con la diferencia que no puede tener valores que se repiten y son datos desordenados.
+	# Se definen de la siguiente manera:
+
+	# Extraé caracteres repetidos y además los desordena
+	b= set("caremonadelaporra")
+	print(b)
+
+	# o también se puede asignar de la siguiente manera
+	# donde extraé uno de los caracteres repetidos dejando solo el primero del conjunto
+
+	2 formas de asignar un conjunto
+	a = {"a","b","c","d","e","f","a"}
+	b = set("caremonadelaporra")
+	print(a)
+	print(a | b) #Imprime ambas listas dejando solo 1 de los elementos repetidos
+	print(a & b) #Imprime las letras que se repiten en ambos conjuntos
+	print(a - b) #Muestra letras en A pero que no están en b
+	print(a ^ b) #Letras que están en a o en b pero que no están en ambas
+
+	# METODOS
+	a.add("g") # agrega otro elemento al conjunto exepto que ya se encuentre en la lista
+	print(a)
+
+	a.discard("g") # Elimina un elemento al conjunto
+	print(a)
+
+	a.clear() #Quita todos los elemntos de un conjunto
+	print(a)
+
+CONDICIONAL IF
+	Las estructuras de control de flujo tiene dos grandes grupos. Las Condicionales y los bucle los bucles se dividen en dos grupos. Bucles determinados e indeterminados. Las Condicionales evaluna si se cumple una parte del código, sino se cumple otra parte y los valores que devuelven son booleanos. La instrucción  if permite evaluar 2 o muchas condiciones. El flujo es el orden como se ejecuta (Leer y programar) la condición. Normalmente se ejecuta de arriba abajo. Dentro de estas condiciones se utilizan los operadores de comparación, lógicos y aritméticos. 
+
+	#La Sintaxis:
+
+		if condición == True:  	#Si esto se cumple
+			Evalua esta parte del código
+		elif condición == True: 	#y si no esto se cumple
+			Evalua esta parte del código
+		else: 			#sino esto se cumple
+			Sino, evalúa esta parte del código
+
+	#Un ejemplo práctico es:
+
+		def nota():
+		    print ("Programa que evalua una nota")
+		    nota=int(input("Digite la Nota: "))
+
+		    if nota <= 5:
+		   	 print(f"Tu nota es {nota}. Estás reprobado ")
+		    else:
+		   	 print(f"Tu nota es {nota}. Has Aprobado ")
+
+		nota()  #Invoca la función
+
+
+	#En cualquier control de flujo se puede utilizar operadores lógicos anidados o concatenados. Esto sirve para acotar una comparación de un elemento Un ejemplo es la siguiente expresión.
+
+		edad=int(input("Digite su edad: "))
+
+		if 5<=edad<105: #Concatenación de elementos 5 es menor o igual a edad menor que 105
+		    print("Puedes pasar ")
+		else:
+		    print ("No puedes pasar ")
+
+	#También se pueden concatenar varios  operadores lógicos
+
+		if condicion<condicion<condicion<condicion:
+		ejecutar este código
+		else:
+		 ejecutar este otro código
+
+BUCLE FOR
+	Los bucles  son estructuras de flujo repetitivas, permiten repetir varias veces un mismo trozo de código de manera determinada o indeterminada. Se compone la declacarión y del cuerpo y el cuerpo es la que se va a repetir x veces. Por su parte el bucle For es un bucle determinado.
+
+	#La Sintaxis:
+
+		for variable in elemento_a_recorer:
+			Cuerpo de Bucle
+
+	#Ejemplo:
+		
+		nombre = "kenneth"  # Declara la variable
+
+		for i in nombre:	
+		    print(i)	#imprime  cada carácter del nombre
+
+		Ejemplo imprimir elementos de una lista
+
+		for i in [1,2,3]:	#Imprime cada elemento de una lista
+		    print(i)
+
+		for i in [1,2,3]:	#Imprime 3 veces el contenido pues es la cantidad de elementos que hay
+		    print(“Imprimir este texto 3 veces”)
+
+BUCLE WHILE
+	Similar al bucle for el bucle while permite repetir un código hasta que se cumpla una condición.
+
+	#La Sintaxis:
+
+		del 1 al 10
+		num = 1
+
+		while  num <= 10:
+		    print(num)
+		    num = num+1
+
+		En Reversa
+		num = 20
+
+		while  num >= 0:
+		    print(num)
+		    num = num-1
+
+MOSTRAR DATOS DEL SISTEMA
+	# mostrar en pantalla la version actual de python instalada en el sistema
+		import sys
+
+	# Ver la versión
+		print(f"La versión de python instalada en este equipo es: {sys.version}")
+
+	# Mas detalles de la versión
+		print(f"La Información de versión de python es: {sys.version_info}")
+
+	'''
+	SYS.VERSION INFO. MUESTRA UNA NOMENCLATURA PARA VERSIONAMIENTO SEMANTICO ------------------------
+
+	Problemas, incluciones de nuevos esquemas, remueve funcionalidades en el lenguaje se modifica
+	    major: x
+	Incluciones de funcionalidades, y cambios menores
+	    minor: x,
+	Mejoras, ajustes, resoluciones de problemas  
+	    micro: x
+
+CONJUNTOS
+	
+	set son conjuntos permite seguir una secuencia pero no acomodarla de manera ordenada
+	Cuando una tupla se convierte a un conjunto si hay datos repetidos los fusiona a un dato único
+
+		n = set() # Asigna en conjunto
+		n = {1,5,6,7,9,11,15} #Crea el conjunto
+		n.add(2) #Agrega al conjunto
+		n.add(16) #Agrega al conjunto
+		print(n) #Imprime el conjunto
+
+		letra  = set() #asigna en conjunto
+		letra = {"a", "f", "i"}
+		letra.add("g") #Agrega al conjunto
+		letra.add("c") #Agrega al conjunto
+		letra.add("h") #Agrega al conjunto
+		letra.add("b") #Agrega al conjunto
+		letra.add("e") #Agrega al conjunto
+		letra.add("d") #Agrega al conjunto
+		print(letra)
+
+		print("f" in letra) #True
+
+		TEOREMA DE PITAGORAS
+			from math import sqrt
+			a = float(input("Digite un número: "))
+			b = float(input("Digite otro número: "))
+			c = sqrt(a**2 + b**2)
+				 
+		PERIMETRO DE LA ELIPSE
+			from math import sqrt, pi
+			r=float(input("Digita la r: "))
+			s=float(input("Digita la s: "))
+			p= 2* pi * sqrt((r**2+s**2)//2)
+			print(f"El perímetro es {p}")
+
+VECTORES
+	Vectores son conjuntos de datos tienen similitud a las listas
+	Los elementos tienen un orden y se pueden acceder mediante su posición
+	Todos los elementos del arreglo deben tener el mismo tipo,
+	en general el tamaño del arreglo es fijo y no crece dinámicamente como las listas
+	Se ocupan principalemente para almacenar datos numéricos
+	los elementos se pueden recorrer usando un ciclo for
+	
+		librero[0] = trofeo
+		librero[1] = libros
+		librero[2] = Cuadernos
+		librero[3] = juguetes
+		librero[4] = Obsequios
+
+	#Arreglo o vector
+
+		n = int(input("Ingresar el tamaño del arreglo: ")) #Tamaño del arreglo
+		m = int(input("Numero de múltiplos: ")) #multiplo de...
+		A = [] #A es el vector
+		for i in range(0, n): #por i en el rango de 0 hasta el tamaño del arreglo asignado
+		    A.append(i*m) #Agrega a la lista el rango desde 0 * m
+
+		print(A) #Multiplica el vector
+
+	#Calcular 10 números aleatorios con vectores
+		
+		import random #Importa la clase random que es la que contiene randint
+
+		def aleatorio(n): #Define una función    
+		    vector = [0]*n  # Crea un vector, con valor de cero ya que ahí se almacenan los aleatorio
+		    for i in range(n): # Se necesita un ciclo para ir recorriendo el valor introducido en teclado
+		             vector[i] = random.randint(0,10) # Devuelve los números con base entera entre el 0 y el 10
+		    return vector # Retorna lo almacenado
+
+		print("Ingrese cuantos números aleatorios desea obtener: ") #Imprime el mensaje de indicación
+		n = int(input()) #Aqui se introduce el valor entero
+
+		aleatorios = aleatorio(n)  #llamar a la función
+		print(aleatorios) #Imprime el resultado
+
+
+		# Vectores y Matrices
+
+			import numpy as np #en terminal pip install numpy / pip install --upgrade pip
+
+			vector = np.array([6,7,1,2,3])
+			print(vector)
+
+VALIDAD UN INPUT in
+	# Entre 3 números dados, cual es mayor que
+
+	while True:
+	    try:
+	   	 n1 = int(input("Digite el Primer valor: "))
+	   	 n2 = int(input("Digite el Segundo valor: "))
+	   	 n3 = int(input("Digite el Tercer valor: "))
+
+	    except ValueError:
+	   	 print("Solo puedes digitar números")
+	   	 continue
+
+	    else:
+	   	 break
+
+
+	    if n1>n2>n3:
+	   	 print(f"{n1} Es Mayor")
+	    elif n2>n1>n3:
+	   	 print(f"{n2} Es Mayor")
+	    elif n3>n2>n1:
+	   	 print(f"{n3} Es Mayor")
+	    elif (n1==n2 > n3):
+	   	 print(f"Primer y Segundo valor es {n1} mayor a {n3}")  
+	    elif (n2==n3 > n1):
+	   	 print(f"{n2} Segundo y tercer valor son {n2} mayor que {n1}")
+	    elif (n1==n3 > n2):
+	   	 print(f"{n1} Primer y tercer valor son {n1} mayor que {n2}")
+	    else:
+	   	 print("Todos los valores son iguales")
+
+VALIDAD CORREO
+
+	mail = input("Digite su correo: ")
+	lista = []
+
+	for i in mail:
+	    lista.append(i)
+	   	 
+	if "@" in lista and "." in lista:
+	    print(mail, " Es un correo")
+	else:
+	    print(mail, " No es un correo")
+
+PROMEDIO DE 3 MATERIAS
+	def suma(n1,n2,n3):
+	    p = (n1 + n2 + n3) / 3
+	    return p
+
+	nota1 = int(input("Digite la primera nota: "))
+	nota2 = int(input("Digite la segunda nota: "))
+	nota3 = int(input("Digite la tercera nota: "))
+	print("El promedio del estudiante es %i" %suma(nota1,nota2,nota3))
+
+TABLA DE MULTIPLICAR
+	def tablas_multiplicar(n):
+	    for i in range(1,11):
+	   	 print(n,"X",i, "=", n * i)
+
+	numero = int(input("Digite la tabla que desea realizar: "))
+	tablas_multiplicar(numero)
+
+
+	O TAMBIEN ESTA OPCION FOR
+	for i in range(1,11):
+	 for x in range(1,11):
+		 print(f" {i} 'x' {x} '=' {i*x}")
+
+SERIR A B A B A B A B
+	#Este ejercicio muestra dentro de un rango aportado, A y B alternado
+		n = int(input("Digite un número: ")) # Solicita un rango de veces por repetir
+		w = 0
+
+		for i in range(1,n+1):
+		    if w == 0:
+		   	 print("A", end=", ")
+		   	 w += 1
+		    else:
+		   	 w -= 1
+		   	 print("B", end=", ")
+
+RADIO DE UN CIRCULO
+	# Solicitar al usuario radio del circulo y calcular área
+	# pi * radio al cuadrado
+	import math
+
+	def radio_circulo(r):
+
+	    area = math.pi * r**2
+	    return (f"{area:.2f}") #Redondea por ejemplo --> 78.53981633974483 a esto --> 78.54
+
+	radio = float(input("Digite el radio del circulo: "))
+	print("El área del circulo es: ", radio_circulo(radio))
+
+AREA DE UN TRIANGULO
+	# Calcular el área de un triangulo dadas la base y altura
+	def area_triangulo(b,a):
+	    '''
+	    formula: Base * altura // 2
+	    '''
+	    area = (b*a)/2
+	    return area
+
+	base = float(input("Digite la base del triangulo: "))
+	altura = float(input("Digite la altura del triangulo: "))
+
+	print ("La base es {} y la altura es {} ".format(base,altura),"y el área del triangulo es: ",  area_triangulo(base,altura))
+
+REVERSE INVERTIR NOMBRE
+	# Pedir el nombre al usuario y obtener su respuesta en orden inverso
+	nombre = input("Digite un nombre: ")
+	print(nombre)
+
+	nombre_invertido = nombre[ ::-1 ]
+	print(nombre_invertido)
+
+	# Pedir el nombre al usuario y obtener su respuesta en orden inverso
+	# Para esto se usa reversed
+	nombre = input("Digite un nombre:  ")
+	x =''.join(reversed(nombre))
+	print(x)
+
+ONZAS A LITROS
+	# Fórmula divide el valor de volumen entre 33.814
+		onzas = float(input("Onzas:"))
+		litro = onzas / 33.814
+		print(onzas, "Onzas son %.4f" % litro)
+
+FIBONACCI
+	#Es la suma de un numero que le antecede
+		Ingresar la cantidad de secuencia #0,1,1,2,3,5....
+		a=int(input("Ingresar la secuencia: "))
+		f = 0  #Primer elemento de la serie
+		s = 1  #Segundo elemento de la serie
+	
+	#Si el dato a ingresado es menor a 0,
+		if a<=0:
+		    # advierte con el siguiente mensaje que no se puede calcular
+			print("No puede hacer el calculo solicitado con el número: ",f)
+		else:
+		    #Imprime el valor f y s  End evita el salto de línea e
+			print(f,s,end=" ")
+
+
+			for x in range(2,a):
+		    	siguiente = f+s                      	 
+		    	print(siguiente, end=" ")
+		    	f = s
+		    	s = siguiente
+
+SERIE 4,3,2,1,4,3,2,1....
+	# c = Controlador
+	# w = trigger (Interruptor)
+
+	n = int(input("Digite un número: ")) # Solicita un rango de veces por repetir
+	c = 0 # Controlor o contador
+	w = 4 # Interruptor tiene un valor de 4
+
+	while c < n: # Mientras controlador sea menor al número ingresado
+	     print(w) #Imprime w que es igual a 4
+	     if w > 1: # Si w es mayor a 1
+	         w = w - 1 # decrementa en 1. Cuando llega a cero imprime brinca al else
+	     else: # sino
+	         w = 4 # w = 4
+	     c += 1  # controlador incrementa de 1 en uno
+
+SEPARAR UNA LISTA EN PARES E IMPARES
+
+
+	lista = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+	p = [ ]
+	im = [ ]
+
+	def pares_impares():
+	    for i in lista:
+	   	 if i % 2== 0:
+	   		 p.append(i)
+	   	 else:
+	   		 im.append(i)
+	    print("Lista de pares: ", p)
+	    print("Lista de impares: ", im)
+
+	pares_impares()
+
+SEGUNDOS A HORAS MINUTOS SEGUNDOS 
+
+	# Ejemplo 174452 para que de 48 horas, 27 minutos, 32 segundos
+	segundos = int(input("Digite los segundos para convertirlos a horas, minutos, segundos: "))
+
+		# 1 hora == 60 minutos
+		# 60 minutos == 60 segundos
+
+	minutos = segundos // 60 # Pasar los minutos a segundos
+	segundos_residuos = segundos % 60 #Segundos que sobran
+	horas = minutos // 60 #Minutos a horas
+	minutos_resto = minutos % 60 #Minutos que sobran
+
+	print(horas, minutos_resto, segundos_residuos)
+
+MULTIPLOS DE 3 5 O AMBOS
+	n = int(input("Digite número es par o impar: "))
+
+	# MULTIPLOS
+	# Multiplos de 3 5 o ambos
+
+	if n%3 == 0 and n%5==0:
+	    print("Es multiplo de ambos")
+	elif n%3 == 0 and not n%5==0:
+	    print("Es multiplo solo de 3")
+	elif n%5 == 0 and not n%3==0:
+	    print("Es multiplo solo de 5")
+	else:
+	    print("No es múltiplo")
+
+DESEA SEGUIR JUGANDO 3 OPCIONES SI NO ERROR
+	p = int(input("Desea juegar. 1=SI 2=NO?"))
+
+	while p == 1:
+	    p = int(input("Desea seguir el juego. 1=SI 2=NO?"))
+
+	while p!=1 and p!=2:
+	    p = int(input("Dato equivocado Seguir el juego. 1=SI 2=NO?"))    
+	    while p == 1:
+	   	 p = int(input("Desea seguir el juego. 1=SI 2=NO?"))
+
+	print("Hasta luego")	
+
+ADIVINAR EL NUMERO
+	
+	s=5 #este es el número a adivinar
+	i = 1 #Intentos
+	n= int(input("Digite un valor entre el 1 al 10: ")) #Solicitud
+
+	while n!=s: # Miestras el valor introducido en n sea diferente s
+	    print(f"Intento {i}") #Inprimir intento
+	    n= int(input("Vuelve a intentar ")) # solicita el nuevo intento solo si no acertó
+	    i+=1 #suma 1 a cada iteracion
+
+	print("Acertaste") #Mensaje si se acertó
+
+SOLICITA EL USUARIO Y NO PASA HASTA QUE SEA CORRECTA SI PASA SOLICITA EL USUARIO HASTA QUE ACIERTE
+	u = input("Digite su usuario: ")
+
+	while u != "kenth":
+	    print("Error")
+	    u = input("Intenta de nuevo: ")
+	else:
+	    c = input("Digite la contraseña: ")
+	    while c != "1234":
+	   	 print("Error intenta de nuevo")
+	   	 c = input("Digite la contraseña: ")
+
+	print("buenas")
+
+NUMERO ENTRE EL 10 Y 20 RANGO O FUERA DE EL
+
+	i = 1
+	n= int(input("Digite un valor entre el 10 y 20: "))
+
+	while 10<=n<=20:
+	    print(f"Intento {i}")
+	    n= int(input("Digite un valor entre el 10 y 20: "))
+	    i+=1
+
+	print("Estás fuera de rango")
+
+TRES NUMEROS IGUALES O DIFERENTE Y QUIEN ES MAYOR
+	n1 = int(input("Digite un número: "))
+	n2 = int(input("Digite otro número: "))
+	n3 = int(input("Digite el último número: "))
+
+	if n1==n2==n3:
+	    print("Todos los números son iguales.")
+
+	elif  n3<n1==n2:
+	    print(f"Hay dos número iguales y es {n1} pero mayores que {n3}")
+	elif  n2<n1==n3:
+	    print(f"Hay dos número iguales y es {n3} pero mayores que {n2}")
+	elif  n1<n2==n3:
+	    print(f"Hay dos número iguales y es {n2} pero mayores que {n1}")
+
+	elif n3<n2<n1 or n2<n3<n1:
+	    print(f"{n1} es mayor que {n2} y {n3}")
+
+	elif n3<n1<n2 or n1<n3<n2:
+	    print(f"{n2} es mayor que {n1} y {n3}")
+
+	elif n1<n2<n3 or n2<n1<n3:
+	    print(f"{n3} es mayor que {n1} y {n3}")
+
+SI FALLA PIERDE 
+	#numero del 1 al 5 si falla uno pierde 2 si falla las dos pierde
+	 5 y cuando acierte dice cuantos puntos quedan de 100
+	 
+	s = 5 
+	v = "r"
+	n = int(input("Digite un número del 1 al 5: "))
+	l = input("Digite una vocal: ")
+	p = 100
+
+	while n!=5 or v!=l:
+	    while (n!=5 and v==l) or (n==5 and v!=l):
+	   	 p-=2
+	   	 print(f"Fallaste tienes {p} puntos")
+	   	 n = int(input("intenta de nuevo. Digita un número del 1 al 5: "))
+	   	 l = input("intenta de nuevo. Digite una vocal: ")
+	    p-=5
+	    print(f"Fallaste tienes {p} puntos")
+	    n = int(input("intenta de nuevo. Digita un número del 1 al 5: "))
+	    l = input("intenta de nuevo. Digite una vocal: ")
+
+	print(f"Eres un genio, te quedan {p} puntos")
+
+MODULO TIME
+	from time import time
+
+		print("""
+
+		    S = SEGUNDOS
+		    M = MINUTOS
+		    H = HORAS
+		    D = DIAS
+
+		""")
+
+
+		print("""
+		   											  S   	M
+		    Para sacar los minutos se divide el tiempo time()//60""")
+	
+		m = (f"Han Pasado {time()//60} minutos desde 1 Enero 1970")
+		print(m)
+		   						 
+		print("""
+		   										   S      	M  H   						 
+		    Para sacar las Horas se divide el tiempo time()//60//60""")
+
+		h = (f"Han Pasado {time()//60//60} Horas desde 1 Enero 1970")
+		print(h)
+
+		print("""
+		   										  S   	M   H   D   
+		    Para sacar los Días se divide el tiempo time()//60//60//24""")
+		d = (f"Han Pasado {time()//60//60//24} días desde 1 Enero 1970")
+		print(d)
+
+		print("""
+
+		   										   S  	M   H   D   A
+		    Para sacar los años se divide el tiempo time()//60//60//24//365
+		    """)
+		a = (f"Han Pasado {int(time()//60//60//24//365)} años desde 1 Enero 1970")
+		print(a)
+
+
+	# MOSTRAR LOS SEGUNDO
+
+		from time import sleep #Importa de time Sleep
+
+		c = 0 #El contador es el que va a mostrar los segundos que inician en cero
+
+		while c<15: #Mientras contador sea menor que 15
+		    i = sleep(1) #Pero sleep se detiene cada segundo para mostra c
+		    c+=1 #Aumenta en 1
+		    print(f"{c} Segundo") #Imprime el valor del contador +=1
+
+
+	# MOSTRAR LOS SEGUNDO MAS A MENOS 
+
+		from time import time, sleep
+
+		t_i = time() #Tiempo inicial
+		b = 1
+		bn = 10
+		c = 1
+		cn = 10
+
+
+		while c<=10:
+		    i = sleep(1)
+		    print(c)
+		    c+=1
+
+		while cn>=0:
+		    i = sleep(1)
+		    print(cn)
+		    cn-=1
+
+		t_f = time() #Tiempo final
+
+		print(f"El proceso duró {int(t_f-t_i)} segundos.")
+
+RANDOM SHUFFLE
+	Radom Shuffle baraja los elementos de una lista
+
+	from random import shuffle, randint, choice, sample
+
+	# randint sintaxis
+	a = randint(0,10)
+	print(a)
+
+	# choice sintaxis selecciona al azar una de las 3 o mas opciones
+	b = choice(["pepino", "pepinillo", "pepinazo"])
+	print(b)
+
+	# shuffle sintaxis acomoda desordenada la lista
+	l = [1,2,3,4,5,6,7,8,9,10]
+	a = shuffle(l)
+
+	# sample sintaxis selecciona al azar 3 elementos de una lista
+	print(l)
+	print(sample(l,3))
+
+	# METODOS. 
+	# upper, lower, title
+
+	r = input("Desea seguir jugando s/n: ")
+
+	while r.lower() == "s":
+	    print("hola")
+	    r = input("Desea seguir jugando s/n: ")
+
+	else:
+	    print("no")
+
+GIT
+	#Lleva un control de versiones que guarda el historial, trabaja de manera descentralizada por lo que en equipos de trabajo grandes todos tiene acceso a una copia del proyecto.  Las ventajas es que almacena, guarda el historial, flexibilidad en el equipo de trabajo, hacer Rollback que es retroceder a versiones anteriores para recuperar contenido que anteriormente trabajaba.
+	
+	#Instalar GIT	
+		git config –h --> Ve todas las configuraciones de git
+
+		Cmnder Console ya lo traé instalado por default
+		git --version
+		git update
+		git update-git-for-windows (reiniciar Cmder)
+		git config --global user.name "mi_Git"
+		git config user.name # Ve el usuario configurado
+		git config --global user.email kenth1977@gmail.com
+		git config user.email # Ve el email configurado
+		git config --global core.autocrlf true (Compatibilidad Linux | windows)
+
+	#Cmder
+		dir o ls = Ver directorios
+		pwd = muestra en que directorio me encuentro
+		cd 	 = Retorceder un directorio y cd .. con espacio en linux
+		cd\ = Ir a la Raíz (Windows)
+		md = Make Directory y mkdir en linux
+
+		El flujo de trabajo es la forma como se va guardando los archivos antes de llegar al servidor final.
+
+		Computadora Control sobre los archivos donde se crea se borra 
+		Stage = Es la parte donde se elige que si y que no pasar al servidor
+		Commit = Es donde se comenta y se prepara el archivo para subir al servidor
+		Server = Es el repositorio final donde se almacena el o los archivos
+
+		Dentro de la carpeta del proyecto Flask que se va a crear o se ha creado inicializar un repositorio git
+
+		git init = Se crea un archivo oculto dentro de la carpeta del proyecto.
+		ls -a = Muestra files o carpetas ocultas 
+		
+		git status = Muestra en color rojo los archivos que se prepararo para subir al servidor
+		
+		git add . = Agrega todos los archivos git add pepino.* agrega solo lo mencionado
+				y git status para ver que lo rojo ahora está en verde listo para el siguiente paso.	
+		
+		git commit -m " mensaje representativo de lo que se va a subir " = revisar con git status
+		
+		rm	= Borra un archivo antes de ser subido al stage  = rm archivo.pepino 
+			y luego realizar un commit con el cambio
+		
+		mv	= Cambia el nombre de la etiqueta al nuevo archivo pepino1 a pepino
+			y para subirlo al stage se escribe git pepino1 pepino sustituyendo pepino1 y con git commit “renombrado pepino1 a pepino”
+			
+		git mv pepino1.txt pepino.tx = cambia el nombre y lo sube al stage de una vez
+		
+		git restore --staged pepino.txt = Saca u omite un archivo desde el stage
+		
+		git restore pepino.txt Restaura un archivo que fue sacado del stage
+			.gitignore = Ignora los archivos o folders que se coloquen dentro de el y de una vez  crear un commit para agregarlo al server git commit –m " xxxxxx"
+
+		git status -s = muestra solo la información modificada pero que ya se encuentran dentro del stage y el archivo o folder modificado    muestra una M antes de esos folders o archivos modificado y los que son antecedidos con un ??	es que aún no han sido ingresados al stage
+		
+		git diff = Muestra el contenido del archivo modificado pero que no están en el staged
+		
+		git diff --staged Muestra el contenido de un archivo modificado dentro del staged
+		
+		git log --oneline = Muestra el status e historial de modificaciones y es antecedido con un número id 
+		
+		git branch	 = Indica sobre que rama se está donde main es la principal
+		
+		git checkout –b pepino = Crea  una rama que se llama pepino y todos los cambios realizados en esta rama 		solo afecta a la rama pepino 
+		
+		git checkout main = Se pasa a la rama principal para hacer un merge
+		
+		git  merge pepino = Traé todo el contenido de rama pepino
+		
+		cat pepino.txt = Consulta el contenido de un archivo y al hacer cat se ve reflejado el contenido
+		Ir al contenido de github crear una cuenta y nuevo repositorio copiar el remote  
+		Y en la consola pegar la ruta y luego push el contenido para subirlo al servidor.
+
+
+
+		git branch -M main
+
+		git remote add origin https://github.com/kerm1977/FLASK.git
+
+		git push -u origin main = Luego de conectar github solo se debe seguir enviando el  con   
+		   este comando
+
+			Para traer o clonar contenido desde github a mi PC
+			git clone --bare https://github.com/kerm1977/FLASK.gi
+			si sale este error  Your branch is ahead of 'origin/main' by 1 commit.
+			
+			git reset HEAD^ --soft
+			git reset HEAD^ --hard 
+		
+			en caso del siguiente error fatal: remote origin already exists
+			Usar este git remote set-url origin https://github.com/kerm1977/x*x*x*x*x*x.git
+			Remueve los repos defectuosos
+			rm -rf .git
+
+FLASK
+	MicroFramework de python para hacer apps web
+	escalable y legible con enrutadores url
+
+	md FLASK | FLET O DJANGO #Crea la carpeta de proyecto
+	cd FLASK | FLET O DJANGO #Entra al directorio creado
+
+		python get-pip.py ##SOLO EN CASO DE QUE NO RECONOCIERA COMANDOS PIP y pip-V para consultar##
+	
+	python -m venv env	#Crea un entorno virtual dentro de carpeta creada arriba llamada flask
+		cd env // cd scripts // activate //cd.. cd.. #Ingresa y activa al entorno virtual
+	
+	pip install FLASK | FLET O DJANGO 
+
+	python.exe -m pip install --upgrade pip
+	
+	Crea un archivo llamado main.py al mismo nivel del env
+	
+	pip install flask_sqlalchemy #Instala las librerías para  DB
+		colocar la carpeta en sublimetext y crear dos folder templates (html’s) y statics  
+		donde viene las imágenes, css, js fuentes.. etc ----------------------------------------
+	
+	pip freeze > requirements.txt #Crea una lista con los requerimientos de flask 
+		y se hace cada vez que se instala una nueva librería 
+	
+	pip list # Para ver las dependencias totales instaladas.
+	
+	pip freeze #Muestra los paquete propios de flask
+	
+	pip install flask-wtf # Opciones de validación para formularios flask y crear el archivo
+	forms.py
+	
+	pip install -r requirements.txt
+
+	pip install email_validator o pip install wtforms[email]
+
+	pip install wtforms-validators
+
+	pip install Flask-Bcrypt
+
+	pip install flask_mysqldb # Para usar base de dato Mysql
+
+	pip install psycopg2 #Para usar la base de datos postgreSQL
+
+	pip install db-sqlite3 Opcional
+		
+	CODIGO DE MENSAJE	 304 
+	https://kinsta-com.translate.goog/knowledgebase/http-304/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=sc
+
+	https://pypi.org/search/
+	 
+	 
+
+EJERCICIO DE LISTAR PARES E ÍMPARES Y BUSCAR UN ELEMENTO
+	# UNA LISTA DE 8 NUMEROS ENTEROS
+	# RECORRERLA 
+	# ORDENARLA 
+	# MOSTRAR LONGITUD
+	# BUSCAR ELEMENTO QUE EL USUARIO PIDA POR TECLADO
+
+
+	c = 0
+	num= int(input("Digite un número: "))
+	lista=[]
+	par = [] 
+	impar = []
+
+	while c<=8:
+		num= int(input("Digite otro número: "))
+		if num % 2 ==0:
+			par.append(num)
+			par.sort()	
+		else:
+			impar.append(num) 
+			impar.sort()
+		c+=1	
+
+
+	print(f"{par} y el largo de la lista pares es: {len(par)}")
+	print(f"{impar} y el largo de la lista impares es: {len(impar)}")
+	buscar=int(input("Ahora Digite el número que desea buscar: "))
+	if buscar in par:
+		print("El número si se encuentra en los pares")
+	elif buscar in impar:
+		print("El número si se encuentra en los impares")
+	else:
+		print("El número no se encuentra en ninguna lista"
+
+EJERCICIO DE WHILE MENOR A 120
+	# Añadir valores a una lista mientras sean menores a 120
+	c = 0
+	n = int(input("Agregar un valor:"))
+	lista = []
+
+	while n<=120:
+		lista.append(n)
+		print(lista)
+		n = int(input("Agregar otro valor:"))
+		lista.sort()
+		c+=1
+
+	print(f"El número {n} es mayor a 120")
+
+DATE
+	import datetime
+
+	print(datetime.date.today()) 		#Imprime la fecha de hoy
+
+	fecha_completa = datetime.datetime.now()
+	print(fecha_completa) 				#fecha completa con hora
+
+	print(fecha_completa.year) 			#Muestra el año
+	print(fecha_completa.month) 		#Muestra el mes
+	print(fecha_completa.day) 			#Muestra el día
+
+
+	fecha_personalizada = fecha_completa.strftime("%d/%m/%Y, %H:%M:%S")
+	print(f"Mi fecha personalizada es {fecha_personalizada}")
+
+SISTEMA DE ARCHIVOS DE PYTHON
+
+DJANGO
+	FRAMEWORK MVC-MTV  MODELO VISTA CONTROLADOR
+	TEMPLATE = LO QUE VE EL USUARIO
+	VIEW = RECIBE LA PETICIÓN 
+	MODELO = EL QUE RECIBE PROCESA Y DEVUELVE LAS PETICIONES
+
+	crear carpeta de proyecto
+	md xxxx
+	cd xxxx
+	python -m venv env <--env/scripts/activate
+	pip install django
+	python.exe -m pip install --upgrade pip
+	pip list
+	python -m django --version
+	django-admin startproject mysite	
+	cd mysite
+	python manage.py runserver
+	http://127.0.0.1:8000/
+	python manage.py migrate
+	python manage.py runserver
+
+	otra forma de ver la version es desde la consola de python
+	version de django
+		c:// python
+		>>> import django
+		>>> django.VERSION
+
+	dentro de la carpeta de proyecto crear otro archivo llamado views.py al mismo nivel de urls, wsgi, asgu, settings...etc
+	e importar dentro de views.py el siguiente módulo e importar los modulos y las vistas entro de urls
+
+		from django.http import HttpResponse
+
+		
+		
+
+
+

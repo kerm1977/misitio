@@ -1,0 +1,150 @@
+#*********************************************************************
+# CSS
+#*********************************************************************
+
+	Cascade Style Sheet
+	1996 y Primer navegador en soportarlo fue Explorer
+	es un lenguaje de estilos para dotar de apariencia y aspecto visual a una página o sitio web (entre otras cosas). También es conocido como el mayor enemigo de los programadores backend. En esta página te ayudo a aprender a dominarlo.
+
+	Aunque el CSS es en cascada osea de arriba abajo, se pueden sobreponer reglas de más abajo con etiquetas especifias.
+
+	Recursos
+		https://lenguajecss.com/css/introduccion/css-moderno/
+	Variables	
+		https://lenguajecss.com/css/variables-css/css-custom-properties/
+
+
+
+#*********************************************************************
+# TRES FORMASR DE USAR CSS Y EN PYTHON
+#*********************************************************************
+	
+	1. POR ENLACE (CORRECTO) EN EL HEAD
+		<link rel="stylesheet" href="index.css" />
+
+	2. EN EL HEAD		
+		<style>
+			div {
+		    	background: hotpink;
+		    	color: white;
+			}
+		</style>
+	
+	3. EN LOS TAGS		
+		<p>¡Hola <span style="color: red; padding: 8px">amigo lector</span>!</p>
+
+	4. JINJA
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/main.css') }}">
+	
+
+
+
+#*********************************************************************
+# ESTRUCTURA DE CSS
+#*********************************************************************
+
+	a- Escribe una regla por línea. Será mucho más fácil de leer y modificar.
+
+	b- Usa la indentación. Tras escribir el carácter { al empezar un bloque de reglas, las propiedades se separan hacia la derecha. Esto hace que sea más fácil de leer y se considera una buena práctica de desarrollo y de programación en general.
+
+	c- El último punto y coma de un bloque de reglas es opcional. Sin embargo, se suele aconsejar escribirlo para mantener una coherencia y evitar problemas o descuidos al modificar posteriormente el código.
+
+----------------------
+
+	1. Selector		Elemento o elementos del documento que vamos a seleccionar para aplicarle un estilo concreto 				 por ejemplo (h1, p, article, footer).
+
+	2. propiedad	Característica principal que vamos a definir con el valor indicado a continuación.
+
+	3. Valor		Cada propiedad tiene una serie de valores concretos asignables, con los que tendrá uno u 					otro comportamiento.
+
+	4. Comentario	Fragmento de texto entre /* y */ con anotaciones o aclaraciones para el desarrollador (el 					navegador los ignorará).
+	
+	5. Regla		Par de propiedad y su respectivo valor asociado.
+
+
+	La estructura puede ser la siguiente:
+		selector {
+			propiedad: valor; /*declaración*/
+			propiedad: valor; /*declaración*/
+			propiedad: valor; /*declaración*/
+		}
+
+
+	Comentarios en CSS
+		Se utiliza /**/
+		/*aqui va un comentario*/
+
+
+
+#*********************************************************************
+# COLORES
+#*********************************************************************
+	
+		Usar hexadecimales #005522 son el color base pero para usar transparencias se puede utilizar 2 digitos más por ejemplo #00552220 donde 20 es el nivel de opacidad. ver los siguientes ejemplos:
+			#00552210
+			#00552220
+			#00552230
+			#00552240
+			#00552250
+			#00552260
+			#00552270
+			#00552280
+			#00552290
+			#005522 <-- sin opacidad o transparencia 
+
+		También se puede usar el rgb o rgba donde a significa alfa
+			
+			OBSOLETO	
+				color: rgba(0,0,0,0.2); 0.2 es similar a decir 20% 
+				color: rgba(0,0,0,50%); o usar 20% es más sencillo
+
+			CORRECTO
+				color: rgb(0 0 0 / 50%);   
+
+
+			CURRENT COLOR ES EL VALOR DEL TEXTO
+				Si no existe un color actual, asume el color por default. NEGRO
+				El ejemplo es usar el color de un borde y se le pone aaa.. por ejemplo
+					
+					color: #aaa
+					border-width: 3px;
+					border-style: solid;
+					border-color: currentColor; /*Asume el color de color: #aaa */
+
+
+
+#*********************************************************************
+# SELECTORES
+#*********************************************************************
+
+	*{} <-- Selector Universal se aplican todas la propiedades a todos los documentos
+
+	h1{}, body{}, footer{}, article{} <-- son selectores de etiqueta
+
+	h1, h2, h3, h4, h5, h6{
+		todos los h tendrían los valores y propiedades css	
+	}
+
+
+	SELECTOR ASCENDENTE ---------------
+
+		div p{
+			Todos los selectores p que se encuentren dentro de una div			
+		}
+
+		div article p{
+			Todos los selectores p que se encuentren dentro de una articulo y un div 			
+		}
+
+
+
+	SELECTOR DE CLASE ------------------
+		En HTML se coloca class="" y en css se coloca .nombreSelectorCLASS
+
+	
+	SELECTOR DE ID ------------------
+		Los identificadores deben ser únicos y no se pueden copiar y deben ser únicamente para JS
+		En HTML se coloca id="" y en css se coloca #nombreSelectorID
+
+
+		

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<!-- https://fontawesome.com/icons/user?f=classic&s=solid -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/main.css') }}">
+						  <!-- title es el nombre que se le dio en index.html -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/p.png') }}">		
+                   
+    {%block title%}
+        {%if title%}
+            <title> {{title}} </title>
+        {%else%}
+            <!-- Este title es por default -->
+            <title> Flask </title>
+        {%endif%}
+    {%endblock%}                         
+</head>
+
+
+<body>
+
+    {% include 'include/navbar.html' %}
+       
+    
+
+    <div class="container main-container">
+        
+        {% block header %}
+            <h1 class="main-title title is-1 has-text-centered">{{title}}</h1>
+        {% endblock %}
+
+     
+
+        {% block content%}
+    	<!-- Aqu va el bloque de contenido -->
+    	{% endblock %}
+    </div>
+
+    <!--Scroll arriba -->
+    <a href="#0" class="cd-top">Top</a>
+    <script src="{{url_for('static', filename='js/jquery111.js')}}"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    <!--Fin scroll arriba -->
+    <script src="{{ url_for('static', filename='js/btn-top.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+html{
+	scroll-behavior: auto;
+}
+
+#btnToTop{
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	top: 90%;
+	left: 95%;
+	background-color: orange;
+	opacity: 70%;
+	border-radius: 50%;
+	z-index: 999;
+	transition: 300ms;
+	}
+
+
+#btnToTop a{
+	position: relative;
+	color: white;
+	font-size: 40px;
+	margin-left: 4.5px;
+	bottom: 4px;
+}
+
+
+/*TRANSICIONES*/
+#btnToTop:hover{
+	transition: 300ms;
+	border-radius: 10px;
+}
+
+
+/*VISTA MOBIL*/
+@media(max-width:991px) {
+	#btnToTop{
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	top: 90%;
+	left: 80%;
+	background-color: orange;
+	opacity: 70%;
+	border-radius: 50%;
+	z-index: 999;
+	}
+
+
+	#btnToTop a{
+		position: relative;
+		color: white;
+		font-size: 40px;
+		margin-left: 4.5px;
+		bottom: 4px;
+		scroll-behavior: smooth;
+		
+	}
+
+	/*TRANSICIONES*/
+	#btnToTop:hover{
+		transition: 300ms;
+		border-radius: 5px;
+
+	}
+
+}
+
+
+ 
+/*boton en html*/
+
+   	/*<div id="btn-Start"></div> esta va debajo del body*/
+    	
+ 	/*este al fondo de la página*/
+/*	<div id="btnToTop">
+		<a href="#btn-Start">
+			<span class="icon-circle-up"></span>
+		</a>
+	</div>*/

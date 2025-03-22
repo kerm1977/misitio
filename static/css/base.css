@@ -1,0 +1,20 @@
+.main-container{
+	margin-top: 100px;
+	width: 90%;
+}
+
+.main-title{
+	margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+	.main-container{
+		text-align: justify;	
+		width: 90%;
+	}
+
+	.main-title{
+	margin-bottom: 40px;
+	}
+
+
