@@ -343,3 +343,22 @@ En el navegador ya se debe visualizar el hola mundo.
 
 
 
+
+
+
+#*********************************************************************
+#  MYSQL CONECTOR ------------------------
+#*********************************************************************
+
+MYSQL CONECTOR
+Descargar Mysql desde  Instalarlo
+	https://dev.mysql.com/downloads/ 
+
+	o en el enlace directo
+	https://dev.mysql.com/downloads/installer/   <-Windows
+
+	CONFIGURAR E INSTALAR EN EL ENV LOS CONECTORES 
+	# pip uninstall mysql-connector
+	# pip install mysql-connector-python	
+
+	EJECUTAR create_db.py y crear una nueva base de datos

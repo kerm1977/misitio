@@ -24,7 +24,6 @@ from werkzeug.utils import secure_filename #trabaja con imagenes para subirlas a
 import uuid as uuid #trabaja con imagenes para subirlas a la DB
 import os #trabaja con imagenes para subirlas a la DB
 import pymysql.cursors
-# from mysql.connector import
 # print(now_time.strftime('%I:%M:%S %p'))
 # pip uninstall -y -r  fichero
 
@@ -38,7 +37,6 @@ import pymysql.cursors
 app = Flask(__name__)
 #Editor enriquecido
 ckeditor = CKEditor(app)
-
 # app.permanent_session_lifetime = timedelta(minutes=1)
 
 
@@ -50,32 +48,31 @@ ckeditor = CKEditor(app)
 ##########################################################################
 ##########################################################################
 # SQLITE3 DB
+# import os
+# dbdir = "sqlite:///" + os.path.abspath(os.getcwd()) + "/db.db" #CONECTOR - RUTA ABSOLUTA
 
-import os
-dbdir = "sqlite:///" + os.path.abspath(os.getcwd()) + "/db.db" #CONECTOR - RUTA ABSOLUTA
-
-#SOLO PARA USO LOCAL
-app.config['SQLALCHEMY_DATABASE_URI'] = dbdir
-host = "localhost",
-user = "latribu",
-password = "root",
-database = "root"
+# #SOLO PARA USO LOCAL
+# app.config['SQLALCHEMY_DATABASE_URI'] = dbdir
+# host = "localhost",
+# user = "latribu",
+# password = "root",
+# database = "root"
 
 ##########################################################################
 #DB MYSQL LOCAL
-				 						 #-U    -P       -UBICACION     -NOMBRE DB
-#app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:root@localhost/db"
+
+# pip uninstall mysql-connector
+# pip install mysql-connector-python	
+		 						 				#-U   -P -UBICACION -NOMBRE DB
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:root@localhost/db"
+
 
 #DB MYSQL PYTHONANYWHERE INSTALAR
-#pip uninstall mysql-connector-python-8.0.6
-#pip install mysql-connector-python
-# pip3  install mysql-connector-python
-# pip3  install mysql-connector	
+
 
 #PARA USO REMOTO	
 											                 #-U          -P                      -UBICACION                          -NOMBRE DB
 #app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://LaTribuHiking:latribu1977@LaTribuHiking.mysql.pythonanywhere-services.com/LaTribuHiking$db"
-
 #########################################################################
 ##########################################################################
 ##########################################################################
