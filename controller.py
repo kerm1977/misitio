@@ -43,35 +43,52 @@ ckeditor = CKEditor(app)
 
 
 
+
+
+
 #########################################################################
 ##########################################################################
 ##########################################################################
 # SQLITE3 DB
+
 import os
 dbdir = "sqlite:///" + os.path.abspath(os.getcwd()) + "/db.db" #CONECTOR - RUTA ABSOLUTA
 
+#SOLO PARA USO LOCAL
 app.config['SQLALCHEMY_DATABASE_URI'] = dbdir
 host = "localhost",
 user = "latribu",
 password = "root",
 database = "root"
 
+##########################################################################
+#DB MYSQL LOCAL
+				 						 #-U    -P       -UBICACION     -NOMBRE DB
+#app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:root@localhost/db"
 
+#DB MYSQL PYTHONANYWHERE INSTALAR
+#pip uninstall mysql-connector-python-8.0.6
+#pip install mysql-connector-python
+# pip3  install mysql-connector-python
+# pip3  install mysql-connector	
 
-
+#PARA USO REMOTO	
+											                 #-U          -P                      -UBICACION                          -NOMBRE DB
+#app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://LaTribuHiking:latribu1977@LaTribuHiking.mysql.pythonanywhere-services.com/LaTribuHiking$db"
 
 #########################################################################
 ##########################################################################
 ##########################################################################
 
+
+
+
+
+
 # OTRA CONFIGURACIÓN
 db = SQLAlchemy(app)
 app.app_context().push()
 migrate = Migrate(app,db,render_as_batch=True)
-
-
-
-
 
 #########################################################################
 ##########################################################################
@@ -88,6 +105,7 @@ app.config['SECRET_KEY'] = pw_hash
 
 
 
+
 #########################################################################
 ##########################################################################
 ##########################################################################
@@ -99,6 +117,7 @@ login_manager.login_message = u"Primero necesitas iniciar sesión"
 @login_manager.user_loader
 def load_user(user_id):
 	return User.query.get(int(user_id))
+
 
 
 
